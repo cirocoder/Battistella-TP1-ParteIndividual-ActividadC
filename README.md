@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# TP1 - Unidad 4 | Parte individual - Actividad C
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web desarrollada como parte del **Trabajo Práctico 1 de la Unidad 4**, en su modalidad individual.
 
-## Available Scripts
+> **Consigna:** “C) Realizar el siguiente ABM con almacenamiento local.”
 
-In the project directory, you can run:
+## Descripción
 
-### `npm start`
+La aplicación implementa un ABM (Alta, Baja y Modificación) de contactos. Permite cargar, consultar, editar y eliminar contactos, manteniendo la información en el almacenamiento local del navegador mediante `localStorage`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Alta:** agregar un contacto con nombre, email y teléfono.
+- **Baja:** eliminar un contacto de la lista.
+- **Modificación:** editar los datos de un contacto existente.
+- **Consulta:** visualizar todos los contactos registrados.
+- **Búsqueda:** filtrar contactos por nombre, email o teléfono.
+- **Persistencia local:** conservar los contactos al recargar la página en el mismo navegador.
 
-### `npm test`
+## Tecnologías utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://react.dev/)
+- JavaScript
+- HTML y CSS Modules
+- `localStorage` del navegador
+- Create React App
 
-### `npm run build`
+## Requisitos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node.js](https://nodejs.org/) y npm instalados.
+- Un navegador web moderno.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalación y ejecución
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clonar el repositorio:
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/cirocoder/Battistella-TP1-ParteIndividual-ActividadC.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Ingresar al directorio del proyecto:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd Battistella-TP1-ParteIndividual-ActividadC
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Instalar las dependencias:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+4. Iniciar la aplicación:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 
-### Code Splitting
+## Scripts disponibles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Comando | Descripción |
+| --- | --- |
+| `npm start` | Ejecuta la aplicación en modo desarrollo. |
+| `npm test` | Ejecuta las pruebas configuradas por Create React App. |
+| `npm run build` | Genera una versión optimizada para producción en `build/`. |
 
-### Analyzing the Bundle Size
+## Estructura principal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```text
+src/
+├── App.js                         # Estado, ABM y búsqueda de contactos
+├── index.js                       # Punto de entrada de React
+├── index.css                      # Estilos globales
+├── components/
+│   ├── ContactForm.js             # Alta y modificación
+│   └── ContactTable.js            # Consulta y acciones de cada contacto
+└── styles/
+    ├── App.module.css
+    ├── ContactForm.module.css
+    └── ContactTable.module.css
+```
 
-### Making a Progressive Web App
+## Almacenamiento local
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Los contactos se guardan en `localStorage` con la clave `contacts`. Por tratarse de almacenamiento local, los datos:
 
-### Advanced Configuration
+- quedan asociados al navegador y al dispositivo donde se ejecuta la aplicación;
+- no se sincronizan con otros usuarios o dispositivos;
+- pueden eliminarse al limpiar los datos del sitio desde el navegador.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Autor
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Ciro Battistella**  
+Ingeniería de Software 1 - TP1, Unidad 4 - Parte individual
